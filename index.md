@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[![bitcoinerheader](https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LN%20Guide.png?token=APNE5TWGRGCRYV7BA5OZL7C7XAMIC)](https:/ln.guide/)
+[![bitcoinerheader](https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LNG2.png?token=APNE5TS7LNWZNLZ65Y4PNGS7XAM4C)](https:/ln.guide/)
 
 ### About
 
