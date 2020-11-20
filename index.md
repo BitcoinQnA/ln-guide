@@ -80,7 +80,7 @@ https://lightningwiki.net/index.php/Main_Page
 
 <p align="center">
   <a href="https://twitter.com/BitcoinQ_A">By Bitcoin Q+A</a> |
-  <a href="https://btcpayjungle.com/apps/4PcaeFHGU2KWyZeLGhXECPq5BCy9/pos">Support</a> |
+  <a href="https://btcpayjungle.com/apps/2Rj7Z4rAJhczJtVjr6B8eKAJLLy3/pos">Support</a> |
   <a href="https://github.com/BitcoinQnA/ln-guide">Create a PR</a>
   <br><br>
 </p>
