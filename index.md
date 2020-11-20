@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[![bitcoinerheader](https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LNG7.png)](https:/ln.guide/)
+[![bitcoinerheader](https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LNG6.png)](https:/ln.guide/)
 
 ## What is the Lightning Network?
 
