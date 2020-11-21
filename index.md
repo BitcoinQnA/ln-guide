@@ -134,6 +134,10 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 * **Route liquidity** - If Alice wants to send a large payment to Dan over Lightning, she needs all of the people on her chosen route to have at least that amount of channel balance otherwise the payment will fail. This only realy becomes an issue for larger payments.
 
+* **Hot Wallets** - Due to the nature of the Lightning network, a user's Lightning node needs to be online 24/7 to acknowledge and sign transactions back and forth. This means that it is advisable that users do not lock up large amounts of bitcoin without taking proper security and backup precautions.
+
+* **Backups** - Bitcoin users will be used to backing up their seed phrase and Lightning wallets are no different. However, Lightning also has [static channel backups](https://wiki.ion.radar.tech/tutorials/troubleshooting/static-channel-backups#solution-2-static-channel-backups-scb) to allow users to recover their off chain Lightning funds in the event of hardware failure or something similar.
+
 <br/>
 
 ##  Wallets and Nodes
