@@ -100,6 +100,11 @@ Being able to do fast and cheap payments to a single user might be beneficial if
 
 Thankfully not, this is where the Lightning Network starts to shine! Provided you have 1 or 2 channels to fairly well connected nodes, you can route transactions to people you aren't directly connected with, via people you have a direct connection (a channel) with.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/TX%20route.png" class=responsive width="650" height="400" maxheight="300" />
+  
+Alice routing a payment to Dan, despite not having a direct channel with him.
+</p>
 
 
 
