@@ -34,7 +34,7 @@ The Lightning Network is scaling solution built on top of the Bitcoin protocol. 
 <p align="center">
 <img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LN%20visual.png" class=responsive width="750" height="350" maxheight="300" />
 
-A visualisation of the Lightning Network by [Acinq](https://explorer.acinq.co/)
+A visualisation of the Lightning Network by <a href="https://explorer.acinq.co/">Acinq</a>
 </p>
 
 
