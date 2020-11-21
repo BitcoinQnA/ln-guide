@@ -50,9 +50,9 @@ These signed but unbroadcasted transactions allow either party to close the chan
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Channel%20open.png" class=responsive width="550" height="350" maxheight="300" />
+<img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Channel%20open.png" class=responsive width="650" height="400" maxheight="300" />
   
-Illustration of a channel open transaction
+Simple illustration of a channel open transaction
 </p>
 
 
@@ -78,7 +78,7 @@ A cheat close is the same as a force close, except that the initiating party is 
 You can open a channel with pretty much any network participant you like, however there are a number of things to consider before doing so...
 
 * **Is it someone you are likely to be transacting with often?** If they are, it makes sense to have a direct channel open to minimise routing fees.
-* **Are they a reliable peer?** If they are offline regularly this will cause you issues.
+* **Are they a reliable peer?** If they are offline regularly this will cause you issues when sending or receiving transactions.
 * **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel.
 * **Are they well connected?** This will become clearer in the next section on routing.
 
