@@ -146,21 +146,27 @@ Download [Breez](Https://Breez.technology), backup your seed phrase and you are 
 
 **Do I need a node?**
 
+Much like Bitcoin, you don't need a node to interact with Lightning but running your own is the most private and secure way to do so. If you aren't trusting your own, you are trusting someone else's. Check out the different node options below.
 
 **Is there a lightning coin?**
 
+No, Lightning transactions essentially transfer ownership of bitcoin from on person to another.
 
 **Why do payments fail?**
 
+There could be down to many different reasons, however the most common is that the node you are transacting through cannot find a suitable payment route to the destination.
 
 **What is Keysend?**
 
+Keysend is a development that allows payments to be routed without an invoice. 
 
 **What are MPP?**
 
+[Multi Part Payments](https://lightning.engineering/posts/2020-05-07-mpp/) allows a user to send payments that are larger than the capacity of their largest channel.
 
 
 <br/>
+
 
 ##  Lightning Tools
 
@@ -178,11 +184,6 @@ Download [Breez](Https://Breez.technology), backup your seed phrase and you are 
 * [In depth Lightning Network Explainer](https://dev.lightning.community/overview/)
 * [Lightning Wiki](https://lightningwiki.net/index.php/Main_Page)
 * [Extensive list of Lightning resources](https://github.com/bcongdon/awesome-lightning-network)
-
-
-Different implementations
-
-Video guides
 
 ***
 
