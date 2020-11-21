@@ -52,7 +52,7 @@ These signed but unbroadcasted transactions allow either party to close the chan
 <p align="center">
 <img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Channel%20open.png" class=responsive width="550" height="350" maxheight="300" />
   
-   Simple illustration of a channel open transaction
+  Simple illustration of a channel open transaction
 </p>
 
 
