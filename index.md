@@ -158,14 +158,15 @@ What are MPP?
 
 ##  Other Resources
 
-White paper
-Video guides
-Explainers
-Different implementations
-https://github.com/bcongdon/awesome-lightning-network
-Explorers
-https://lightningwiki.net/index.php/Main_Page
+* [White paper](https://lightning.network/lightning-network-paper.pdf)
+* [In depth Lightning Network Explainer](https://dev.lightning.community/overview/)
+* [Lightning Wiki](https://lightningwiki.net/index.php/Main_Page)
+* [Extensive list of Lightning resources](https://github.com/bcongdon/awesome-lightning-network)
 
+
+Different implementations
+
+Video guides
 
 ***
 
