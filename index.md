@@ -140,7 +140,7 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 ## FAQ
 
-**What is the easiest way to get started?
+**What is the easiest way to get started?**
 
 
 **Do I need a node?**
