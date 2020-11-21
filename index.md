@@ -16,10 +16,9 @@ This page aims to help people understand a little more on the mechanics of Light
 2.  [Channels](#channels)
 3.  [Transactions](#transactions)
 4.  [Drawbacks](#drawbacks)
-5.  [Wallets and Nodes](#wallets-and-nodes)
-6.  [Tools](#tools)
-7.  [FAQ](#faq)
-8.  [Other resources](#other-resources)
+5.  [Tools](#lightning-tools)
+6.  [FAQ](#faq)
+7.  [Other resources](#other-resources)
 
 <br/>
 
@@ -124,7 +123,7 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 * **Channel management** - If a user makes a lot of payments in a single direction, channels can become unbalanced, meaning that all of the funds are stuck on one side of the channel. This then requires the user to take action by balancing their channels. This can be done by circular rebalancing (paying yourself out of one channel and into another) or via a [submarine swap](https://lightning.engineering/loop/) service that allows you to drain off or fill up an existing channel for a small fee.
 
-* **Inbound liquidity** - If a user opens a channel to someone else, all of the funds intially sit on their side of the channel. This means they can only send payments and cannot receive. There are three main ways around this...
+* **Inbound liquidity** - If a user opens a channel to someone else, all of the funds intially sit on their side of the channel. This means they can only send payments and cannot receive. Lightning wallets like [Breez](https://breez.technology/) and [Pheonix]((https://phoenix.acinq.co/) have recently released upgrades that mitigate this by opening channels [on the go](https://medium.com/breez-technology/the-breez-release-candidate-getting-lightning-ready-for-the-global-takeover-b5d1f9756229) as required. However for those running their own Lightning Node and managing their own channels, there are three main ways around this...
   * Spend some sats 'away' to the other side of the channel
   * Purchase some inbound liquidity from a service like [Lightning Pool](https://lightning.engineering/posts/2020-11-02-lightning-pool/)
   * Use a submarine swap service
@@ -139,18 +138,14 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 <br/>
 
-##  Wallets and Nodes
+##  Lightning Tools
 
-See bitcoinwallet.guide + node.guide for ref
-
-##  Tools
-
-Wallets
-Nodes
-LN markets
-Bitrefill
-Other stores
-Strike?
+* [Wallets](bitcoinwallet.guide/lightning)
+* [Nodes](node.guide)
+* [Bitrefill](https://www.bitrefill.com/)
+* [Lightning Network Stores](https://lightningnetworkstores.com/)
+* [Network Explorer](https://1ml.com/)
+* [Lightning tips](https://tippin.me/)
 
 ## FAQ
 
