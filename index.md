@@ -12,24 +12,30 @@ This page aims to help people understand a little more on the mechanics of Light
 
 ## Table of Contents 
 
-1.  [The Lightning/Bitcoin stack](#the-lightning/bitcoin-stack)
+1.  [The Lightning/Bitcoin stack](#the-bitcoin-and-lightning-stack)
 2.  [Channels](#channels)
 3.  [Transactions](#transactions)
 4.  [Drawbacks](#drawbacks)
-5.  [Wallets + Nodes](#wallets-+-nodes)
+5.  [Wallets and Nodes](#wallets-and-nodes)
 6.  [Tools](#tools)
 7.  [Other resources](#other-resources)
 
 <br/>
 
 
-## The Lightning/Bitcoin stack
+## The Bitcoin and Lightning stack
 
 The Bitcoin 'base layer' (the blockchain) cannot facilitate enough transactions to allow billions of people to use it every day. For example, if a couple of million people suddenly wanted to start using the network daily to everyday purchases, the transaction queue and fee rate would quickly spike as people compete to get their transactions processed. To aleviate this and enable the network to scale to cope with the expected exponential increase in transaction numbers, a layered system is being worked on and rolled out, much like the [internet protocol stack](https://en.wikipedia.org/wiki/Internet_protocol_suite).
 
 Of course these transaction levels could be drastically increased by using a centralised database, similar to the current financial system with have today. But that wouldn't be very 'Bitcoin', would it? Enter the original 'layer 2' solution, [The Lightning Network](https://lightning.network/lightning-network-paper.pdf).
 
 The Lightning Network is scaling solution built on top of the Bitcoin protocol. It facilitates smaller, near instant payments between users at very low cost. It prevents the need for every transaction made to take place on the Bitcoin ‘base layer’ whilst still ensuring that the value being transacted abides by the rules of the Bitcoin network. It is trustless, with no centralised databases and every part of the Lightning Network starts from and finishes up, on the Bitcoin blockchain. Users can exit 'layer 2' and return to the base layer at any time they like. 
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LN%20visual.png" class=responsive width="750" height="350" maxheight="300" />
+
+A visualisation of the Lightning Network by [Acinq](https://explorer.acinq.co/)
+</p>
 
 
 ## Channels
@@ -54,7 +60,7 @@ MPP?
 Channel management
 Inbound liquidity
 
-##  Wallets + Nodes
+##  Wallets and Nodes
 
 See bitcoinwallet.guide + node.guide for ref
 
