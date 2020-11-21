@@ -47,6 +47,15 @@ A channel is opened by one or two users locking up an amount of sats into an on 
 
 These signed but unbroadcasted transactions allow either party to close the channel at any point and ensures the sats contained within are returned 'on chain' to their rightful owner. Each time a payment is made from person A to person B and vice versa over Lightning, the two parties will sign a Bitcoin transaction to reflect the updated balance of each party and then pass the siged transaction to their counter party. This process can be repeated an unlimited amount of times and these signed transactions are only ever broadcast to the Bitcoin network in the event of a channel closure. 
 
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Channel%20open.png" class=responsive width="550" height="350" maxheight="300" />
+  
+A simple illustration of a channel open transaction
+</p>
+
+
 ### Channel Closures
 
 Much like a channel open, a channel closure is an on-chain Bitcoin transaction. Channel closures occur when one or both parties want to settle their balance back to the Bitcoin network. There are three types of channel closures that can occur with Lightning.
