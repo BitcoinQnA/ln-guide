@@ -97,7 +97,7 @@ Fees
 Keysend?
 MPP?
 
-Being able to do fast and cheap payments to a single user might be beneficial if you are conducting many transactions but don't forget that each channel has a blockchain footprint of two on transactions, so opening a channel to do just a couple of payments is counter productive. Lightning is not always the answer. So what happen's when a user wants to make a Lightning payment to someone they don't have a channel open with, surely they don't need to have to open channels with every person they want to transact with? 
+Being able to do fast and cheap payments to a single user might be beneficial if you are conducting many transactions but don't forget that each channel has a blockchain footprint of two on chain transactions, so opening a channel to do just a couple of payments is counter productive. Lightning is not always the answer. So what happen's when a user wants to make a Lightning payment to someone they don't have a channel open with, surely they don't need to have to open channels with every person they want to transact with? 
 
 Thankfully not, this is where the Lightning Network starts to shine! Provided you have 1 or 2 channels to fairly well connected nodes, you can route transactions to people you aren't directly connected with, via people you have a direct connection (a channel) with.
 
@@ -107,7 +107,7 @@ Thankfully not, this is where the Lightning Network starts to shine! Provided yo
 Alice routing a payment to Dan, despite not having a direct channel with him.
 </p>
 
-This type of multi-hop transaction is carried out in a trust free way using a process called [onion routing](https://wiki.ion.radar.tech/tech/lightning/onion-routing). This method allows for secure transfer of messages structured in such a way that each 'hop' only sees the information they need to see to continue the payment to the next participant in the route until it reaches the final destination, the recipient.  Due to the cryptographic structure of the Lightning transaction, Bob or Carol cannot steal the payment because they do not know the secret required to claim the sats.
+This type of multi-hop transaction is carried out in a trust free way using a process called [onion routing](https://wiki.ion.radar.tech/tech/lightning/onion-routing). This method allows for secure transfer of 'messages' known as Hashed Time Locked Contracts or [HTLC's](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) are structured in such a way that each 'hop' only sees the information they need to take their fee and continue the payment to the next participant in the route until it reaches the final destination, the recipient.
 
 Here is a simplified run down of what happens when Alice presses 'send' in her Lightning wallet for the transaction above. It sounds complicated, but it all happens under the hood in a matter of seconds.
 
