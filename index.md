@@ -162,7 +162,7 @@ Keysend is a development that allows payments to be routed without an invoice.
 
 **What are MPP?**
 
-[Multi Part Payments](https://lightning.engineering/posts/2020-05-07-mpp/) allows a user to send payments that are larger than the capacity of their largest channel.
+[Multi Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) allows a user to send payments that are larger than the capacity of their largest channel.
 
 
 <br/>
