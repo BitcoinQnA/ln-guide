@@ -73,6 +73,8 @@ You can open a channel with pretty much any network participant you like, howeve
 * **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel.
 * **Are they well connected?** This will become clearer in the next section on routing.
 
+You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/).
+
 <br/>
 
 ##  Transactions
