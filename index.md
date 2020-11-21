@@ -16,8 +16,8 @@ This page aims to help people understand a little more on the mechanics of Light
 2.  [Channels](#channels)
 3.  [Transactions](#transactions)
 4.  [Drawbacks](#drawbacks)
-5.  [Tools](#lightning-tools)
-6.  [FAQ](#faq)
+5.  [FAQ](#faq)
+6.  [Tools](#lightning-tools)
 7.  [Other resources](#other-resources)
 
 <br/>
@@ -138,6 +138,14 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 <br/>
 
+## FAQ
+
+Do I need a node?
+Is there a lightning coin?
+Why do payments fail?
+What is Keysend?
+What are MPP?
+
 ##  Lightning Tools
 
 * [Wallets](https://bitcoinwallet.guide/lightning)
@@ -146,14 +154,6 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 * [Lightning Network Stores](https://lightningnetworkstores.com/)
 * [Network Explorer](https://1ml.com/)
 * [Lightning tips](https://tippin.me/)
-
-## FAQ
-
-Do I need a node?
-Is there a lightning coin?
-Why do payments fail?
-What is Keysend?
-What are MPP?
 
 
 ##  Other Resources
