@@ -18,7 +18,8 @@ This page aims to help people understand a little more on the mechanics of Light
 4.  [Drawbacks](#drawbacks)
 5.  [Wallets and Nodes](#wallets-and-nodes)
 6.  [Tools](#tools)
-7.  [Other resources](#other-resources)
+7.  [FAQ](#faq)
+8.  [Other resources](#other-resources)
 
 <br/>
 
@@ -95,10 +96,19 @@ Fees
 Keysend?
 MPP?
 
+Being able to do fast and cheap payments to a single user might be beneficial if you are conducting many transactions but don't forget that each channel has a blockchain footprint of two on transactions, so opening a channel to do just a couple of payments is counter productive. Lightning is not always the answer. So what happen's when a user wants to make a Lightning payment to someone they don't have a channel open with, surely they don't need to have to open channels with every person they want to transact with? 
+
+Thankfully not, this is where the Lightning Network starts to shine! Provided you have 1 or 2 channels to fairly well connected nodes, you can route transactions to people you aren't directly connected with, via people you have a direct connection (a channel) with.
+
+
+
+
+
 ##  Drawbacks
 
 Channel management
 Inbound liquidity
+Route liquidity
 
 ##  Wallets and Nodes
 
@@ -112,6 +122,12 @@ LN markets
 Bitrefill
 Other stores
 Strike?
+
+## FAQ
+
+Do I need a node?
+Is there a lightning coin?
+
 
 
 ##  Other Resources
