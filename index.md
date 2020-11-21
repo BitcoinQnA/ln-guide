@@ -140,8 +140,8 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 ##  Lightning Tools
 
-* [Wallets](bitcoinwallet.guide/lightning)
-* [Nodes](node.guide)
+* [Wallets](https://bitcoinwallet.guide/lightning)
+* [Nodes](https://node.guide)
 * [Bitrefill](https://www.bitrefill.com/)
 * [Lightning Network Stores](https://lightningnetworkstores.com/)
 * [Network Explorer](https://1ml.com/)
