@@ -89,14 +89,6 @@ You can compare these stats and many more when choosing a peer at [1ml](https://
 
 ##  Transactions
 
-Basic tx routing
-Path calc
-HTLC
-Invoices
-Fees
-Keysend?
-MPP?
-
 Being able to do fast and cheap payments to a single user might be beneficial if you are conducting many transactions but don't forget that each channel has a blockchain footprint of two on chain transactions, so opening a channel to do just a couple of payments is counter productive. Lightning is not always the answer. So what happen's when a user wants to make a Lightning payment to someone they don't have a channel open with, surely they don't need to have to open channels with every person they want to transact with? 
 
 Thankfully not, this is where the Lightning Network starts to shine! Provided you have 1 or 2 channels to fairly well connected nodes, you can route transactions to people you aren't directly connected with, via people you have a direct connection (a channel) with.
@@ -128,9 +120,21 @@ Here is a simplified run down of what happens when Alice presses 'send' in her L
 
 ##  Drawbacks
 
-Channel management
-Inbound liquidity
-Route liquidity
+Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, it does not come without its own limitations. These are outlined breifly below...
+
+* **Channel management** - If a user makes a lot of payments in a single direction, channels can become unbalanced, meaning that all of the funds are stuck on one side of the channel. This then requires the user to take action by balancing their channels. This can be done by circular rebalancing (paying yourself out of one channel and into another) or via a [submarine swap](https://lightning.engineering/loop/) service that allows you to drain off or fill up an existing channel for a small fee.
+
+* **Inbound liquidity** - If a user opens a channel to someone else, all of the funds intially sit on their side of the channel. This means they can only send payments and cannot receive. There are three main ways around this...
+
+1. Spend some sats 'away' to the other side of the channel
+2. Purchase some inbound liquidity from a service like [Lightning Pool](https://lightning.engineering/posts/2020-11-02-lightning-pool/)
+3. Use a submarine swap service
+
+* **Channel Size** - If a user opens a channel for 1 million sats and then needs to make a payment of 1.5 millions sats, they cannot do so without the use of [Multi Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) which allows the use of more than one payment channel controlled by a single user to route a transaction.
+
+* **Route liquidity** - If Alice wants to send a large payment to Dan over Lightning, she needs all of the people on her chosen route to have at least that amount of channel balance otherwise the payment will fail. This only realy becomes an issue for larger payments.
+
+<br/>
 
 ##  Wallets and Nodes
 
@@ -150,6 +154,8 @@ Strike?
 Do I need a node?
 Is there a lightning coin?
 Why do payments fail?
+What is Keysend?
+What are MPP?
 
 
 ##  Other Resources
