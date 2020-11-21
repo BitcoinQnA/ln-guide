@@ -41,8 +41,6 @@ A visualisation of the Lightning Network by <a href="https://explorer.acinq.co/"
 
 ## Channels
 
-### What are channels?
-
 The Lightning Network consists of thousands of two party payment channels. These payment channels enable those two users to pay one another back and forth as many times as they like, almost instantly and with no blockchain fees. 
 
 A channel is opened by one user locking up an amount of sats into an on chain 'funding transaction' that creates a 2 of 2 multi-signature wallet on the Bitcoin network, with each user receiving one of the keys. The opening channel 'state' will reflect that one user is putting in x amount of sats and each party will sign off to say that they accept this is correct. This 'sign off' is actually an unbroadcasted Bitcoin transaction that contains the signature of both parties which are passed to one another over the Lightning network. 
@@ -65,9 +63,17 @@ Where one party closes the channel without the consent of their counterpart. The
 
 A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour, provided your hardware is online around the time that the cheat closure transaction is broadcast.
 
+
 ### Who to open a channel with?
 
+You can open a channel with pretty much any network participant you like, however there are a number of things to consider before doing so...
 
+* **Is it someone you are likely to be transacting with often?** If they are, it makes sense to have a direct channel open to minimise routing fees.
+* **Are they a reliable peer?** If they are offline regularly this will cause you issues.
+* **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel.
+* **Are they well connected?** This will become clearer in the next section on routing.
+
+<br/>
 
 ##  Transactions
 
