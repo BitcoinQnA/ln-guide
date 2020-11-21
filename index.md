@@ -6,9 +6,9 @@ layout: default
 
 ## What is the Lightning Network?
 
-Insert intro here.
-Who is this site for?
-What is the aim?
+The Lightning Network is scaling solution built on top of the Bitcoin protocol. It facilitates smaller, near instant payments between users at very low cost. It prevents the need for every transaction made to take place on the Bitcoin ‘base layer’ whilst still ensuring that the value being transacted abides by the core rules and values of the Bitcoin network. You cannot transact on Lightning without owning bitcoin.
+
+This page aims to help people understand a little more on the mechanics of Lightning and how it interacts with the underlying Bitcoin network and we aim to achieve this without getting too far into the technicals, although there will be some further reading [linked](#other-resources) for those that want to take things a step further. Thanks to the developers of the various applications that interact with Lightning, many of the concepts outlined here are obfuscated away behind simple user interfaces. However, it always pays to have a good base level of understanding to help help a user be more aware of what is happening when they send or recieve a payment on Lightning. 
 
 <br/>
 
@@ -28,6 +28,9 @@ What is the aim?
 ## The Lightning/Bitcoin stack
 
 Explainer on how the two work together
+
+
+
 
 ## Channels
 
