@@ -142,8 +142,10 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 **What is the easiest way to get started?**
 
+Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning.
 
 **Do I need a node?**
+
 
 
 **Is there a lightning coin?**
