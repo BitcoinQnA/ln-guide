@@ -34,8 +34,8 @@ If you want to do things through your own [node](https://node.guide), then using
 1.  Setup your node
 2.  Enable Lightning and create a wallet
 4.  Decide how much you want to open the channel with based on your expected spending habits
-4.  Fund your new on chain Lightning with the desired amount of sats 
-3.  Identify a suitable channel partner (see advice above) and obtain the node's public key
+4.  Fund your new on chain wallet with the desired amount of sats 
+3.  Identify a suitable channel partner (see advice above) and obtain their node's public key
 5.  Open the channel using RTL or Thunderhub and wait for it to be confirmed on the blockchain
 6.  Select a mobile wallet and connect it to your node using the guides relevant to your chosen node/wallet combo (*this is completely optional as RTL or Thunderhub can be used to transact, but are not mobile native*).
 7.  You can now send some sats over Lightning using your own node
