@@ -12,6 +12,7 @@ This page aims to help people understand a little more on the mechanics of Light
 
 ## Table of Contents 
 
+1.  [Get started](#get-started)
 1.  [The Lightning/Bitcoin stack](#the-bitcoin-and-lightning-stack)
 2.  [Channels](#channels)
 3.  [Transactions](#transactions)
@@ -21,6 +22,24 @@ This page aims to help people understand a little more on the mechanics of Light
 7.  [Other resources](#other-resources)
 
 <br/>
+
+## Get started
+
+Theory is great but there's nothing quite like simply getting stuck in.
+
+Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning. Your channels are managed for you (for a small fee) and you can even send/receive Bitcoin on chain. The app will deal with this on your behalf using submarine swaps and will send or deposit the equivalent amount of sats via Lightning. [Here](https://youtu.be/5zhW7ilOjWg) is what that process looks like. 
+
+If you want to do things through your own [node](https://node.guide), then using an implementation such as myNode or RaspiBlitz makes set up easy. They come pre packaged with node management tools like RTL and Thunderhub and make connecting [mobile wallets](https://bitcoinwallet.guide/lightning) like Zap or Zeus very simple. Here is a simplified workflow for using these processes...
+
+1.  Setup your node
+2.  Enable Lightning and create a wallet
+4.  Decide how much you want to open the channel with based on your expected spending habits
+4.  Fund your new on chain Lightning with the desired amount of sats 
+3.  Identify a suitable channel partner (see advice above) and obtain the node's public key
+5.  Open the channel using RTL or Thunderhub and wait for it to be confirmed on the blockchain
+6.  Select a mobile wallet and connect it to your node using the guides relevant to your chosen node/wallet combo (*this is completely optional as RTL or Thunderhub can be used to transact, but are not mobile native*).
+7.  You can now send some sats over Lightning using your own node
+8.  See the steps outlined [here](#drawbacks) for gaining some inbound liquidity to allow you to receive sats
 
 
 ## The Bitcoin and Lightning stack
@@ -145,22 +164,6 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 **Do I need to use Lightning?**
 
 There is no right or wrong answer here. At present Bitcoin fees are still fairly cheap which makes on chain transactions acceptable for 95% of users. But for those who regularly transact using smallers amounts, Lightning presents the opportunity to save on fees and also benefit from near instant transaction settlement.
-
-**What is the easiest way to get started?**
-
-Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning. Your channels are managed for you (for a small fee) and you can even send/receive Bitcoin on chain. The app will deal with this on your behalf using submarine swaps and will send or deposit the equivalent amount of sats via Lightning. [Here](https://youtu.be/5zhW7ilOjWg) is what that process looks like. 
-
-If you want to do things through your own [node](https://node.guide), then using an implementation such as myNode or RaspiBlitz makes set up easy. They come pre packaged with node management tools like RTL and Thunderhub and make connecting [mobile wallets](https://bitcoinwallet.guide/lightning) like Zap or Zeus very simple. Here is a simplified workflow for using these processes...
-
-1.  Setup your node
-2.  Enable Lightning and create a wallet
-4.  Decide how much you want to open the channel with based on your expected spending habits
-4.  Fund your new on chain Lightning with the desired amount of sats 
-3.  Identify a suitable channel partner (see advice above) and obtain the node's public key
-5.  Open the channel using RTL or Thunderhub and wait for it to be confirmed on the blockchain
-6.  Select a mobile wallet and connect it to your node using the guides relevant to your chosen node/wallet combo (*this is completely optional as RTL or Thunderhub can be used to transact, but are not mobile native*).
-7.  You can now send some sats over Lightning using your own node
-8.  See the steps outlined [here](#drawbacks) for gaining some inbound liquidity to allow you to receive sats
 
 **Do I need a node?**
 
