@@ -6,7 +6,7 @@ layout: default
 
 ## About
 
-This page aims to help people understand a little more on the mechanics of Lightning and how it interacts with the underlying Bitcoin network. We aim to achieve this without getting too far into the technicals, although there will be some further reading [linked](#other-resources) for those that want to take things a step further. Thanks to the developers of the various applications that interact with Lightning, many of the concepts outlined here are obfuscated away behind simple user interfaces. However, it always pays to have a good base level of understanding to help help a user be more aware of what is happening when they send or recieve a payment on Lightning. 
+This page aims to help people understand a little more on the mechanics of Lightning and how it interacts with the underlying Bitcoin network. We aim to achieve this without getting too far into the technicals, although there will be some further reading [linked](#other-resources) for those that want to take things a step further. The examples and terminology used are a done so intentionally to communicate a very high level overview of the basic Lightning Network operation. Thanks to the developers of the various applications that interact with Lightning, many of the concepts outlined here are obfuscated away behind simple user interfaces. However, it always pays to have a good base level of understanding to help help a user be more aware of what is happening when they send or recieve a payment on Lightning. 
 
 <br/>
 
