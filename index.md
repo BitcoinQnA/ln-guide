@@ -170,7 +170,7 @@ There is no right or wrong answer here. At present Bitcoin fees are still fairly
 
 **Do I need a node?**
 
-Much like Bitcoin, you don't need a node to interact with Lightning, but running your own is the most private and secure way to do so. If you aren't trusting your own, you are trusting someone else's. Check out the different node options linked in the Lightning tools section.
+Much like Bitcoin, you don't need a node to interact with Lightning, but running your own is the most private and secure way to do so. If you aren't trusting your own, you are trusting someone else's. Fortunately, most of the common Bitcoin nodes come packaged with a Lightning implementation too. Check them out in the Lightning tools section below.
 
 **Who maintains the Lightning Network?**
 
