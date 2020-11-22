@@ -168,7 +168,7 @@ Much like Bitcoin, you don't need a node to interact with Lightning, but running
 
 **Who maintains the Lightning Network?**
 
-The Lightning network is an open protocol that many people work on and contribute towards, all implementations work to the [B.O.L.T](https://github.com/lightningnetwork/lightning-rfc/blob/master/00-introduction.md) open standard. The most common implementations are almost 100% compatible and are...
+The Lightning network is an open protocol that many people work on and contribute towards, all implementations work to the [B.O.L.T](https://github.com/lightningnetwork/lightning-rfc/blob/master/00-introduction.md) open standard and the common implementations are completely interoperable. They are...
 
 1.  [LND](https://github.com/lightningnetwork/lnd)
 2.  [C Lightning](https://github.com/ElementsProject/lightning)
@@ -203,6 +203,10 @@ The optimal solution is to revive your node and avoid the need to close your cha
 **Why do my channel balances change over time?**
 
 This is likely because someone has routed a transaction through your node. This has the effect of moving some of the balance from one side of the channel to the other. If you do not want this to happen, you can specify that your channel is private at the time of opening. This effectively shields it from view for the rest of the network.
+
+**How do I get my sats off Lightning?**
+
+You can close a channel, which will refund your balance back to your on chain wallet. Alternatively, if you have received a lot of Lightning payments and your channel balance is getting full, you can complete a [loop out](https://lightning.engineering/loop/) which will drain a certain percentage of your channel balance back to an on chain wallet, freeing up some channel capacity for you to receive again.
 
 **Can I make money on the Lightning Network?**
 
