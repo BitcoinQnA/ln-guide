@@ -55,7 +55,7 @@ Simple illustration of a channel open transaction
 </p>
 
 
-### Channel Closures
+## Channel Closures
 
 Much like a channel open, a channel closure is an on-chain Bitcoin transaction. Channel closures occur when one or both parties want to settle their balance back to the Bitcoin network. There are three types of channel closures that can occur with Lightning and in all instances the fees are paid by the person that opened the channel.
 
@@ -72,7 +72,7 @@ Where one party closes the channel without the consent of their counterpart. The
 A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour, provided your hardware is online around the time that the cheat closure transaction is broadcast.
 
 
-### Who to open a channel with?
+## Who to open a channel with?
 
 You can open a channel with pretty much any network participant you like, however there are a number of things to consider before doing so...
 
