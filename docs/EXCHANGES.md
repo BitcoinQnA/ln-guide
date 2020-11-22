@@ -1,3 +1,9 @@
+---
+layout: default
+---
+
+[![bitcoinerheader](https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/LNG7.png)](https:/ln.guide/)
+
 ## Exchanges and Services
 
 1. Trade on-chain tokens for Lightning invoice payments on [submarineswaps.org](https://submarineswaps.org/)
