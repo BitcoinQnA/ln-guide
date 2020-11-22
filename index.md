@@ -206,7 +206,11 @@ This is likely because someone has routed a transaction through your node. This 
 
 **How do I get my sats off Lightning?**
 
-You can close a channel, which will refund your balance back to your on chain wallet. Alternatively, if you have received a lot of Lightning payments and your channel balance is getting full, you can complete a [loop out](https://lightning.engineering/loop/) which will drain a certain percentage of your channel balance back to an on chain wallet, freeing up some channel capacity for you to receive again.
+You can close a channel, which will refund your balance back to your on chain wallet. Alternatively, if you have received a lot of Lightning payments and your channel balance is getting full, you can complete a [loop out](https://lightning.engineering/loop/) which will drain a certain percentage of your channel balance back to an on chain wallet, freeing up some channel capacity for you to receive again. The reverse operation (loop in) can be used to 'top up' your channel balance if you have made lots of payments and no longer have sufficient outbound liquidity.
+
+**Can I make my channel larger after I have opened it?**
+
+No, channel sizes are fixed at the time of opening. However, you can leverage multiple channels at the same time using Multi Path Payments.
 
 **Can I make money on the Lightning Network?**
 
@@ -214,7 +218,7 @@ Yes, technically you can earn sats via routing. However, the gains to be had vs 
 
 **How much does it cost to open or close a channel?**
 
-That depends on the current state of the Bitcoin [mempool](https://mempool.space) at the time and the fee rate negotiated with the channel partner.
+That depends on the current state of the Bitcoin [mempool](https://mempool.space) at the time and the fee rate negotiated with your channel partner.
 
 **What is Keysend?**
 
@@ -222,7 +226,7 @@ Keysend is a development that allows for spontaneous payments to be routed witho
 
 **What are MPP?**
 
-[Multi Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) allows a user to send payments that are larger than the capacity of their single largest channel by utilising the liquidity of more than 1 channel at the same time.
+[Multi Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) allows a user to send payments that are larger than the capacity of their single largest channel by utilising the liquidity of more than 1 channel at the same time. This needs to be active at the node level
 
 
 <br/>
