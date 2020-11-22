@@ -171,6 +171,7 @@ Keysend is a development that allows payments to be routed without an invoice.
 ##  Lightning Tools
 
 * [Wallets](https://bitcoinwallet.guide/lightning)
+* [Exchanges and Services](/docs/EXCHANGES.md)
 * [Nodes](https://node.guide)
 * [Bitrefill](https://www.bitrefill.com/)
 * [Lightning Network Stores](https://lightningnetworkstores.com/)
