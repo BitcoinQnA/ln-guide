@@ -41,7 +41,9 @@ If you want to do things through your own [node](https://node.guide), then using
 7.  You can now send some sats over Lightning using your own node
 8.  See the steps outlined [here](#drawbacks) for gaining some inbound liquidity to allow you to receive sats
 
+
 <br/>
+
 
 ## The Bitcoin and Lightning stack
 
