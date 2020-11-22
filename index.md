@@ -252,7 +252,7 @@ Keysend is a development that allows for spontaneous payments to be routed witho
 * [Extensive list of Lightning resources](https://github.com/bcongdon/awesome-lightning-network)
 * [Another Lightning resource hub](https://www.lopp.net/lightning-information.html) 
 
-### Videos
+## Videos
 
 * [Ministry of Nodes LN overview](https://youtu.be/39HRCfMQ_ZU)
 * [Ministry of Nodes practical application](https://youtu.be/DfRYJcBsfkA)
@@ -260,7 +260,7 @@ Keysend is a development that allows for spontaneous payments to be routed witho
 * [BTC Sessions Phoenix Wallet walkthrough](https://youtu.be/Cx5PK1H5OR0)
 * [KIS Bitcoin RTL walkthrough](https://www.keepitsimplebitcoin.com/nodl-lightning-node/)
 
-### Podcasts
+## Podcasts
 
 * [Stephan Livera - Managing your Lightning node](https://stephanlivera.com/episode/135/)
 * [What Bitcoin Did - Intro to Lightning #1](https://www.whatbitcoindid.com/podcast/the-beginners-guide-to-bitcoin-part-13-the-lightning-network-with-jack-mallers)
