@@ -25,7 +25,7 @@ This page aims to help people understand a little more on the mechanics of Light
 
 ## Get started
 
-Theory is great but there's nothing quite like simply getting stuck in.
+Theory is great but there's nothing quite like getting your hands dirty.
 
 Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning. Your channels are managed for you (for a small fee) and you can even send/receive Bitcoin on chain. The app will deal with this on your behalf using submarine swaps and will send or deposit the equivalent amount of sats via Lightning. [Here](https://youtu.be/5zhW7ilOjWg) is what that process looks like. 
 
@@ -41,6 +41,7 @@ If you want to do things through your own [node](https://node.guide), then using
 7.  You can now send some sats over Lightning using your own node
 8.  See the steps outlined [here](#drawbacks) for gaining some inbound liquidity to allow you to receive sats
 
+<br/>
 
 ## The Bitcoin and Lightning stack
 
