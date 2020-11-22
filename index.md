@@ -6,7 +6,7 @@ layout: default
 
 ## About
 
-This page aims to help people understand a little more on the mechanics of Lightning and how it interacts with the underlying Bitcoin network. We aim to achieve this without getting too far into the technicals, although there will be some further reading [linked](#other-resources) for those that want to take things a step further. The examples and terminology used are a done so intentionally to communicate a very high level overview of the basic Lightning Network operation. Thanks to the developers of the various applications that interact with Lightning, many of the concepts outlined here are obfuscated away behind simple user interfaces. However, it always pays to have a good base level of understanding to help a user be more aware of what is happening when they send or recieve a payment via Lightning. 
+This page aims to help people understand a little more on the mechanics of Lightning and how it interacts with the underlying Bitcoin network. We aim to achieve this by using simple terminology and without getting too deep into the technicals, although there will be some further reading linked for those that want to take things a step further. Thanks to the developers of the various applications that interact with Lightning, many of the concepts outlined here are obfuscated away behind simple user interfaces. However, it always pays to have a good base level of understanding to help a user be more aware of what is happening when they send or recieve a payment via Lightning. 
 
 <br/>
 
@@ -35,7 +35,7 @@ If you want to do things through your own [node](https://node.guide), then using
 2.  Enable Lightning and create a wallet
 4.  Decide how much you want to open the channel with based on your expected spending habits
 4.  Fund your new on chain wallet with the desired amount of sats 
-3.  Identify a suitable channel partner (see advice above) and obtain their node's public key
+3.  Identify a suitable channel partner using the advice [below](#who-to-open-a-channel-with) and obtain their node's public key
 5.  Open the channel using RTL or Thunderhub and wait for it to be confirmed on the blockchain
 6.  Select a mobile wallet and connect it to your node using the guides relevant to your chosen node/wallet combo (*this is completely optional as RTL or Thunderhub can be used to transact, but are not mobile native*).
 7.  You can now send some sats over Lightning using your own node
@@ -65,7 +65,7 @@ The Lightning Network consists of thousands of two party payment channels. These
 
 A channel is opened by one or two users locking up an amount of sats into an on chain 'funding transaction' that creates a 2 of 2 multi-signature wallet on the Bitcoin network, with each user receiving one of the keys. The opening channel 'state' will reflect the amount a user contributes and each party will sign off to say that they accept this is correct. This 'sign off' is actually an unbroadcasted Bitcoin transaction that contains the signature of both parties which are passed to one another over the Lightning network. 
 
-These signed but unbroadcasted transactions allow either party to close the channel at any point and ensures the sats contained within are returned 'on chain' to their rightful owner. Each time a payment is made from person A to person B and vice versa over Lightning, the two parties will sign a Bitcoin transaction to reflect the updated balance of each party and then pass the siged transaction to their counter party. This process can be repeated an unlimited amount of times and these signed transactions are only ever broadcast to the Bitcoin network in the event of a channel closure. 
+These signed but unbroadcasted transactions allow either party to close the channel at any point and ensures the sats contained within are returned 'on chain' to their rightful owner. Each time a payment is made from person A to person B and vice versa over Lightning, the two parties will sign a Bitcoin transaction to reflect the updated balance of each party and then pass the signed transaction to their counter party. This process can be repeated an unlimited amount of times and these signed transactions are only ever broadcast to the Bitcoin network in the event of a channel closure. 
 
 
 <p align="center">
@@ -99,11 +99,17 @@ Where both parties agree to close the channel and the most recent state is broad
 
 **Force Close**
 
-Where one party closes the channel without the consent of their counterpart. These types of closures generally occur when one of the channel parties is unreachable. For a force close to take place, one user simply broadcasts the most recent channel state known to them. Once a force close is confirmed onto the blockchain, the user that initiated the force close will have their balance locked for a set amount of time. This enables their counterparty to recognise the channel close and dispute it if they do not agree with the outcome.
+Where one party closes the channel without the consent of their counterpart. These types of closures generally occur when one of the channel parties is unreachable. For a force close to take place, one user simply broadcasts the most recent channel state known to them. Once a force close is confirmed onto the blockchain, the user that initiated the force close will have their balance locked for a set amount of time. This enables their counterparty to see the channel close and dispute it if they do not agree with the outcome.
 
 **Cheat close**
 
-A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour, provided your hardware is online around the time that the cheat closure transaction is broadcast.
+A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour (detail below), provided your hardware is online around the time that the cheat closure transaction is broadcast.
+
+**Justice Transaction**
+
+In both the 'force' and 'cheat' closure scenarios the party having the channel closed on them can dispute the closure if they do not agree with the outcome (eg the other party has published an old channel state, paying them more sats back). To trigger this dispute they simply bringing their node back online within the lockout period (typically 2016 blocks). Alternatively they may have chosen to set up a [Watchtower](https://bitcoinmagazine.com/articles/watchtowers-are-coming-lightning) service that will monitor their channels and act on their behalf for a small fee. 
+
+If the party creating the dispute can successfully publish a more recent channel state than the one broadcast by their channel partner, their node will be able to publish a [Justice transaction](https://bitcoinmagazine.com/articles/bitmex-research-confirms-lightning-justice-works) and steal the entire balance of the channel. The threat of such a scenario is enough to ward off most dishonest Lightning operators for fear of losing all of their funds.
 
 
 ***
@@ -130,7 +136,7 @@ Here is a simplified run down of what happens for the transaction above to be su
 4.  Once a route is found, the initial hop goes to Bob, whom Alice has a direct channel with
 5.  Alice's message to Bob says that if he sends 10,001 sats to Carol, he can keep 1 sat for himself
 6.  They update their channel state
-7.  Bob send a message to Carol to say that if she sends 10,000 sats to Dan, she can keep 1 sat for herself
+7.  Bob sends a message to Carol to say that if she sends 10,000 sats to Dan, she can keep 1 sat for herself
 8.  They update their channel state
 9.  Carol sends a message to Dan, which Dan has a secret to unlock, allowing him to claim the 10,000 sats from Alice
 10. They update their channel state
@@ -206,7 +212,7 @@ The two most common Lightning node management tools [Ride the Lightning](https:/
 
 **What happens if my node breaks while I have open channels?**
 
-The optimal solution is to revive your node and avoid the need to close your channels in the first place, however this won't always be possible and this is where backups are crucial. You can import your Lightning Wallet seed and static channel backup file into another Lightning Node which will trigger a closure notification to all peers and return your sats back to your on chain wallet This process is possible through the command line but is the easiest way to do so is through interfaces like RTL or Thunderhub. Another outcome could be that a Lightning peer may notice that you are offline and choose to force close the channel (hopefully in an honest manner), this will return any sats in that channel back to your on chain wallet.
+The optimal solution is to revive your node and avoid the need to close your channels in the first place, however this won't always be possible and this is where backups are crucial. You can import your Lightning Wallet seed and static channel backup file into another Lightning Node which will trigger a closure notification to all peers and return your sats back to your on chain wallet This process is possible through the command line but is the easiest way to do so is through interfaces like RTL or Thunderhub. Another outcome could be that a Lightning peer may notice that you are offline and choose to force close the channel (hopefully in an [honest manner](#channel-closures)), this will return any sats in that channel back to your on chain wallet.
 
 **Why do my channel balances change over time?**
 
