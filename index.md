@@ -214,7 +214,7 @@ That depends on the current state of the Bitcoin [mempool](https://mempool.space
 
 **What is Keysend?**
 
-Keysend is a development that allows payments to be routed without an invoice. 
+Keysend is a development that allows for spontaneous payments to be routed without an invoice. 
 
 **What are MPP?**
 
