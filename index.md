@@ -57,7 +57,7 @@ The Lightning Network is scaling solution built on top of the Bitcoin protocol. 
 A visualisation of the Lightning Network by <a href="https://explorer.acinq.co/">Acinq</a>
 </p>
 
-<br/>
+***
 
 ## Channels
 
@@ -106,7 +106,7 @@ Where one party closes the channel without the consent of their counterpart. The
 A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour, provided your hardware is online around the time that the cheat closure transaction is broadcast.
 
 
-<br/>
+***
 
 ##  Transactions
 
@@ -138,7 +138,7 @@ Here is a simplified run down of what happens for the transaction above to be su
 
 *There are no 'real world' identities in Lightning, the names above are purely for illustration purposes. Each participant has a Node Public Key which acts as their 'Lightning ID'.*
 
-<br/>
+***
 
 ##  Drawbacks
 
@@ -160,7 +160,7 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
 
 * **Backups** - Bitcoin users will be used to backing up their seed phrase and Lightning wallets are no different. However, the most common Lightning implementation [LND](https://github.com/lightningnetwork/lnd) also has [static channel backups](https://wiki.ion.radar.tech/tutorials/troubleshooting/static-channel-backups#solution-2-static-channel-backups-scb) to allow users to recover their off chain Lightning funds in the event of hardware failure or similar. It is good practice to download a copy of your SCB file when opening or closing any channels. How you achieve this will depend on the way you interact with your Lightning node but most of the common approaches will have a download button somewhere within the user interface.
 
-<br/>
+***
 
 ## FAQ
 
@@ -237,7 +237,7 @@ Keysend is a development that allows for spontaneous payments to be routed witho
 [Multi Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) allows a user to send payments that are larger than the capacity of their single largest channel by utilising the liquidity of more than 1 channel at the same time. This needs to be active at the node level
 
 
-<br/>
+***
 
 
 ##  Lightning Tools
