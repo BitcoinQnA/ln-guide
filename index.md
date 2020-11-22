@@ -21,7 +21,7 @@ This page aims to help people understand a little more on the mechanics of Light
 6.  [Tools](#lightning-tools)
 7.  [Other resources](#other-resources)
 
-<br/>
+***
 
 ## Get started
 
