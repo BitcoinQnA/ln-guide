@@ -76,6 +76,18 @@ These signed but unbroadcasted transactions allow either party to close the chan
 Simple illustration of a channel open transaction
 </p>
 
+## Who to open a channel with?
+
+You can open a channel with pretty much any network participant you like, however there are a number of things to consider before doing so...
+
+* **Is it someone you are likely to be transacting with often?** If they are, it makes sense to have a direct channel open to minimise routing fees.
+* **Are they a reliable peer?** If they are offline regularly this will cause you issues when sending or receiving transactions.
+* **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel so it pays to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
+* **Are they well connected?** If you only have 1 or 2 peers, it pays for them to be fairly well connected so that you can route transactions through them across the network. This will become clearer in the next section on transactions.
+
+You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/).
+
+<br/>
 
 ## Channel Closures
 
@@ -93,18 +105,6 @@ Where one party closes the channel without the consent of their counterpart. The
 
 A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour, provided your hardware is online around the time that the cheat closure transaction is broadcast.
 
-<br/>
-
-## Who to open a channel with?
-
-You can open a channel with pretty much any network participant you like, however there are a number of things to consider before doing so...
-
-* **Is it someone you are likely to be transacting with often?** If they are, it makes sense to have a direct channel open to minimise routing fees.
-* **Are they a reliable peer?** If they are offline regularly this will cause you issues when sending or receiving transactions.
-* **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel so it pays to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
-* **Are they well connected?** If you only have 1 or 2 peers, it pays for them to be fairly well connected so that you can route transactions through them across the network. This will become clearer in the next section on transactions.
-
-You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/).
 
 <br/>
 
