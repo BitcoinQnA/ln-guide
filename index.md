@@ -206,7 +206,7 @@ The two most common Lightning node management tools [Ride the Lightning](https:/
 
 **What happens if my node breaks while I have open channels?**
 
-The optimal solution is to revive your node and avoid the need to close your channels in the first place, however this won't always be possible and this is where backups are crucial. You can import your Lightning Wallet seed and static channel backup file into another Lightning Node which will trigger a closure notification to all peers and eventually return your sats back to your on chain wallet This process is possible through the command line but is the easiest way to do so is through interfaces like RTL or Thunderhub. Another outcome could be that a Lightning peer may notice that you are offline and choose to force close the channel (hopefully in an honest manner), this will return any sats in that channel back to your on chain wallet.
+The optimal solution is to revive your node and avoid the need to close your channels in the first place, however this won't always be possible and this is where backups are crucial. You can import your Lightning Wallet seed and static channel backup file into another Lightning Node which will trigger a closure notification to all peers and return your sats back to your on chain wallet This process is possible through the command line but is the easiest way to do so is through interfaces like RTL or Thunderhub. Another outcome could be that a Lightning peer may notice that you are offline and choose to force close the channel (hopefully in an honest manner), this will return any sats in that channel back to your on chain wallet.
 
 **Why do my channel balances change over time?**
 
