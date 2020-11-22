@@ -184,7 +184,9 @@ There could be down to many different reasons, however the most common is that t
 
 **What does balanced channels mean?**
 
-Having a balance channel simply means that you have a fairly equal amount of sats on both sides of your channel. Think of it like an abacus where there are an equal amount of beads on each side. This ensures the user is in the best position to send **or** receive via Lightning, it is also beneficial for those wanting to earn sats by being a [routing node](https://blog.lightning.engineering/posts/2019/11/07/routing-guide-2.html), though that concept is for the more advanced user. 
+Having a balance channel simply means that you have a fairly equal amount of sats on both sides of your channel. Think of it like an abacus where there are an equal amount of beads on each side. This ensures the user is in the best position to send **or** receive via Lightning, it is also beneficial for those wanting to earn sats by being a [routing node](https://blog.lightning.engineering/posts/2019/11/07/routing-guide-2.html), though that concept is for the more advanced user.
+
+Using the example below, the blue balance on the left is the 'local balance'. This represents the size of the balance on my side of each channel and is how much I can **spend** within each. The green balance on the right is the 'remote balance'. This represents the size of the balance on my peer's side of the channel and is how much I can **receive** within each. 
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Channels.png" class=responsive width="650" height="300" maxheight="300" />
