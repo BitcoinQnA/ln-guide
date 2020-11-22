@@ -63,15 +63,20 @@ A visualisation of the Lightning Network by <a href="https://explorer.acinq.co/"
 
 The Lightning Network consists of thousands of two party payment channels. These payment channels enable those two users to pay one another back and forth as many times as they like, almost instantly and with no blockchain fees. 
 
-A channel is opened by one or two users locking up an amount of sats into an on chain 'funding transaction' that creates a 2 of 2 multi-signature wallet on the Bitcoin network, with each user receiving one of the keys. The opening channel 'state' will reflect the amount a user contributes and each party will sign off to say that they accept this is correct. This 'sign off' is actually an unbroadcasted Bitcoin transaction that contains the signature of both parties which are passed to one another over the Lightning network. 
-
-These signed but unbroadcasted transactions allow either party to close the channel at any point and ensures the sats contained within are returned 'on chain' to their rightful owner. Each time a payment is made from person A to person B and vice versa over Lightning, the two parties will sign a Bitcoin transaction to reflect the updated balance of each party and then pass the signed transaction to their counter party. This process can be repeated an unlimited amount of times and these signed transactions are only ever broadcast to the Bitcoin network in the event of a channel closure. 
-
+A channel is opened by one or two users locking up an amount of sats into an on chain 'funding transaction' that creates a 2 of 2 multi-signature wallet on the Bitcoin network, with each user receiving one of the keys. The opening channel 'state' will reflect the amount a user contributes and each party will sign off to say that they accept this is correct. This 'sign off' is actually an unbroadcasted Bitcoin transaction containing the signature of both parties which are passed to one another via the Lightning network. These signed but unbroadcasted transactions allow either party to close the channel at any point and ensures the sats contained within are returned 'on chain' to their rightful owner.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Open%20Channel.png" class=responsive width="650" height="400" maxheight="300" />
   
 Simple illustration of a channel open transaction
+</p>
+
+Each time a payment is made from person A to person B, sats are pushed from one side of the channel to the other (think beads sliding along an abacus). The two parties then sign a Bitcoin transaction to reflect the updated channel balance of each and pass across to the other participant. This process can be repeated an unlimited amount of times and these signed transactions are only ever broadcast to the Bitcoin network in the event of a channel closure. 
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/BitcoinQnA/ln-guide/master/assets/images/Alice%20and%20Bob.png" class=responsive width="650" height="400" maxheight="300" />
+  
+Simple illustration of a direct channel payment
 </p>
 
 <br/>
@@ -85,7 +90,7 @@ You can open a channel with pretty much any network participant you like, howeve
 * **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel so it pays to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
 * **Are they well connected?** If you only have 1 or 2 peers, it pays for them to be fairly well connected so that you can route transactions through them across the network. This will become clearer in the next section on transactions.
 
-You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/).
+You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/) or use a simplified version [here](https://nodes.lightning.computer/availability/v1/btc.json) that gives nodes an aggregated score based upon a combination of things like uptime, liquidity and how well connected they are. It then displays the best 5%.
 
 <br/>
 
@@ -107,7 +112,7 @@ A cheat close is the same as a force close, except that the initiating party is 
 
 **Justice Transaction**
 
-In both the 'force' and 'cheat' closure scenarios the party having the channel closed on them can dispute the closure if they do not agree with the outcome (eg the other party has published an old channel state, paying them more sats back). To trigger this dispute they simply bringing their node back online within the lockout period (typically 2016 blocks). Alternatively they may have chosen to set up a [Watchtower](https://bitcoinmagazine.com/articles/watchtowers-are-coming-lightning) service that will monitor their channels and act on their behalf for a small fee. 
+In both the 'force' and 'cheat' closure scenarios the party having the channel closed on them can dispute the closure if they do not agree with the outcome (eg the other party has published an old channel state, paying them more sats back). To trigger this dispute they simply bringing their node back online within the lockout period (typically 2016 blocks or 2 weeks). Alternatively they may have chosen to set up a [Watchtower](https://bitcoinmagazine.com/articles/watchtowers-are-coming-lightning) service that will monitor their channels and act on their behalf for a small fee. 
 
 If the party creating the dispute can successfully publish a more recent channel state than the one broadcast by their channel partner, their node will be able to publish a [Justice transaction](https://bitcoinmagazine.com/articles/bitmex-research-confirms-lightning-justice-works) and steal the entire balance of the channel. The threat of such a scenario is enough to ward off most dishonest Lightning operators for fear of losing all of their funds.
 
