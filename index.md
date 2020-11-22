@@ -25,7 +25,7 @@ This page aims to help people understand a little more on the mechanics of Light
 
 ## The Bitcoin and Lightning stack
 
-The Bitcoin 'base layer' (the blockchain) cannot facilitate enough transactions to allow billions of people to use it every day. For example, if a couple of million people suddenly wanted to start using the network daily for everyday purchases, the transaction queue and fee rate would quickly spike as people compete to get their transactions processed. To aleviate this and enable the network to scale to cope with the expected exponential increase in transaction numbers, a layered system is being worked on and rolled out, much like the [internet protocol stack](https://en.wikipedia.org/wiki/Internet_protocol_suite).
+The Bitcoin 'base layer' (the blockchain) cannot facilitate enough transactions to allow billions of people to use it every day. For example, if a couple of million people suddenly wanted to start using the network daily for everyday purchases, the transaction queue and fee rate would quickly spike as people compete to get their transactions processed. To aleviate this and enable the network to scale to cope with the expected exponential increase in transaction numbers, a layered system is being worked on and rolled out, much like the [Internet Protocol stack](https://en.wikipedia.org/wiki/Internet_protocol_suite).
 
 Of course these transaction levels could be drastically increased by using a centralised database, similar to the current financial system we have today. But that wouldn't be very 'Bitcoin', would it? Transactions could be censored, privacy would be non-existant and we would be no better off. Enter the original 'layer 2'  Bitcoin solution, [The Lightning Network](https://lightning.network/lightning-network-paper.pdf).
 
@@ -71,6 +71,7 @@ Where one party closes the channel without the consent of their counterpart. The
 
 A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour, provided your hardware is online around the time that the cheat closure transaction is broadcast.
 
+<br/>
 
 ## Who to open a channel with?
 
@@ -127,7 +128,7 @@ Whilst the Lightning Network provides a fantastic scaling solution for Bitcoin, 
   * Get someone else to open a channel to you
   * Spend some sats 'away' to the other side of the channel
   * Purchase some inbound liquidity from a service like [Lightning Pool](https://lightning.engineering/posts/2020-11-02-lightning-pool/)
-  * Use a submarine swap service
+  * Use a [submarine swap](https://wiki.ion.radar.tech/tech/research/submarine-swap) service
 
 * **Channel Size** - If a user opens a channel for 1 million sats and then needs to make a payment of 1.5 millions sats, they cannot do so without the use of [Multi Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) which allows the use of more than one payment channel controlled by a single user to route a transaction. Fortunately, this is fast becoming standard practice and hugely increases the user experience.
 
@@ -147,15 +148,15 @@ There is no right or wrong answer here. At present Bitcoin fees are still fairly
 
 **What is the easiest way to get started?**
 
-Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning. Your channels are managed for you (for a small fee) and you can even send/receive Bitcoin on chain. The app will deal with this on your behalf using submarine swaps and will send or deposit the equivalent amount of sats via Lightning. 
+Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning. Your channels are managed for you (for a small fee) and you can even send/receive Bitcoin on chain. The app will deal with this on your behalf using submarine swaps and will send or deposit the equivalent amount of sats via Lightning. [Here](https://youtu.be/5zhW7ilOjWg) is what that process looks like. 
 
-If you want to do things through your own [node](https://node.guide) then using an implementation such as myNode or RaspiBlitz makes set up easy. They come pre packaged with node management tools like RTL and Thunderhub and make connecting [mobile wallets](https://bitcoinwallet.guide/lightning) like Zap or Zeus very simple. Here is a simplified workflow for using these processes...
+If you want to do things through your own [node](https://node.guide), then using an implementation such as myNode or RaspiBlitz makes set up easy. They come pre packaged with node management tools like RTL and Thunderhub and make connecting [mobile wallets](https://bitcoinwallet.guide/lightning) like Zap or Zeus very simple. Here is a simplified workflow for using these processes...
 
 1.  Setup your node
 2.  Enable Lightning and create a wallet
 4.  Decide how much you want to open the channel with based on your expected spending habits
 4.  Fund your new on chain Lightning with the desired amount of sats 
-3.  Identify a suitable channel partner (see advice above)
+3.  Identify a suitable channel partner (see advice above) and obtain the node's public key
 5.  Open the channel using RTL or Thunderhub and wait for it to be confirmed on the blockchain
 6.  Select a mobile wallet and connect it to your node using the guides relevant to your chosen node/wallet combo (*this is completely optional as RTL or Thunderhub can be used to transact, but are not mobile native*).
 7.  You can now send some sats over Lightning using your own node
@@ -163,7 +164,7 @@ If you want to do things through your own [node](https://node.guide) then using 
 
 **Do I need a node?**
 
-Much like Bitcoin, you don't need a node to interact with Lightning, but running your own is the most private and secure way to do so. If you aren't trusting your own, you are trusting someone else's. Check out the different node options linked below.
+Much like Bitcoin, you don't need a node to interact with Lightning, but running your own is the most private and secure way to do so. If you aren't trusting your own, you are trusting someone else's. Check out the different node options linked in the Lightning tools section.
 
 **Who maintains the Lightning Network?**
 
@@ -195,7 +196,7 @@ Channel balance graphs from Thunderhub.
 
 The two most common Lightning node management tools [Ride the Lightning](https://twitter.com/Suheb__/status/1228470045715681280?s=20) and [Thunderhub](https://apotdevin.com/blog/thunderhub-balancing) make this very simple within the user interfaces. Click the links for video demo's of both.
 
-**What happens if my Node breaks while I have open channels?**
+**What happens if my node breaks while I have open channels?**
 
 The optimal solution is to revive your node and avoid the need to close your channels in the first place, however this won't always be possible and this is where backups are crucial. You can import your Lightning Wallet seed and static channel backup file into another Lightning Node which will trigger a closure notification to all peers and eventually return your sats back to your on chain wallet This process is possible through the command line but is the easiest way to do so is through interfaces like RTL or Thunderhub. Another outcome could be that a Lightning peer may notice that you are offline and choose to force close the channel (hopefully in an honest manner), this will return any sats in that channel back to your on chain wallet.
 
@@ -205,7 +206,7 @@ This is likely because someone has routed a transaction through your node. This 
 
 **Can I make money on the Lightning Network?**
 
-Yes, technically you can via routing. However, the gains to be had vs the node and channel management required put this practice out of reach for the average Lightning user.
+Yes, technically you can earn sats via routing. However, the gains to be had vs the node and channel management required put this practice out of reach for the average Lightning user.
 
 **How much does it cost to open or close a channel?**
 
@@ -237,9 +238,25 @@ Keysend is a development that allows for spontaneous payments to be routed witho
 
 * [White paper](https://lightning.network/lightning-network-paper.pdf)
 * [In depth Lightning Network explainer](https://dev.lightning.community/overview/)
+* [Mastering the Lightning Network Book](https://github.com/lnbook/lnbook) (*Still being written*)
 * [Lightning Wiki](https://lightningwiki.net/index.php/Main_Page)
+* [Lightning Node Management by Openoms](https://openoms.gitbook.io/lightning-node-management/)
 * [Extensive list of Lightning resources](https://github.com/bcongdon/awesome-lightning-network)
 * [Another Lightning resource hub](https://www.lopp.net/lightning-information.html) 
+
+### Videos
+
+* [Ministry of Nodes LN overview](https://youtu.be/39HRCfMQ_ZU)
+* [Ministry of Nodes practical application](https://youtu.be/DfRYJcBsfkA)
+* [TFTC Breez Wallet walkthrough](https://youtu.be/5zhW7ilOjWg)
+* [BTC Sessions Phoenix Wallet walkthrough](https://youtu.be/Cx5PK1H5OR0)
+* [KIS Bitcoin RTL walkthrough](https://www.keepitsimplebitcoin.com/nodl-lightning-node/)
+
+### Podcasts
+
+* [Stephan Livera - Managing your Lightning node](https://stephanlivera.com/episode/135/)
+* [What Bitcoin Did - Intro to Lightning #1](https://www.whatbitcoindid.com/podcast/the-beginners-guide-to-bitcoin-part-13-the-lightning-network-with-jack-mallers)
+* [What Bitcoin Did - Intro to Lightning #2](https://www.whatbitcoindid.com/podcast/christian-decker-an-introduction-to-the-lightning-network)
 
 ***
 
