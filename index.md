@@ -227,6 +227,7 @@ Keysend is a development that allows for spontaneous payments to be routed witho
 ##  Lightning Tools
 
 * [Wallets](https://bitcoinwallet.guide/lightning)
+* [Exchanges and Services](/docs/EXCHANGES.md)
 * [Nodes](https://node.guide)
 * [Lightning Network Stores](https://lightningnetworkstores.com/)
 * [Network Explorer](https://1ml.com/)
