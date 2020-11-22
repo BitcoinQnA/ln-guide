@@ -76,6 +76,8 @@ These signed but unbroadcasted transactions allow either party to close the chan
 Simple illustration of a channel open transaction
 </p>
 
+<br/>
+
 ## Who to open a channel with?
 
 You can open a channel with pretty much any network participant you like, however there are a number of things to consider before doing so...
