@@ -222,7 +222,7 @@ This is likely because someone has routed a transaction through your node. This 
 
 **How do I get my sats off Lightning?**
 
-You can close a channel, which will refund your balance back to your on chain wallet. Alternatively, if you have received a lot of Lightning payments and your channel balance is getting full, you can complete a [loop out](https://lightning.engineering/loop/) which will drain a certain percentage of your channel balance back to an on chain wallet, freeing up some channel capacity for you to receive again. The reverse operation (loop in) can be used to 'top up' your channel balance if you have made lots of payments and no longer have sufficient outbound liquidity.
+You can close a channel, which will refund your balance back to your on chain wallet. Alternatively, if you have received a lot of Lightning payments and your channel balance is getting full, you can complete a [loop out](https://lightning.engineering/loop/) which will drain a percentage of your channel balance back to an on chain wallet, freeing up some channel capacity for you to receive again. The reverse operation (loop in) can be used to 'top up' your channel balance if you have made lots of payments and no longer have sufficient outbound liquidity.
 
 **Can I make my channel larger after I have opened it?**
 
