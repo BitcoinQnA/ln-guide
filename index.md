@@ -25,7 +25,7 @@ This page aims to help people understand a little more on the mechanics of Light
 
 ## Get started
 
-Theory is great but there's nothing quite like getting your hands dirty.
+Theory is great but there's nothing quite like getting your hands dirty! Once you're set up, feel free to [send](https://bitcoiner.guide/#get-in-touch) me an invoice for a few sats to test your setup.
 
 Download [Breez](Https://Breez.technology), backup your seed phrase and you are ready to receive via Lightning. Your channels are managed for you (for a small fee) and you can even send/receive Bitcoin on chain. The app will deal with this on your behalf using submarine swaps and will send or deposit the equivalent amount of sats via Lightning. [Here](https://youtu.be/5zhW7ilOjWg) is what that process looks like. 
 
