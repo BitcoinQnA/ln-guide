@@ -87,8 +87,8 @@ You can open a channel with pretty much any network participant you like, howeve
 
 * **Is it someone you are likely to be transacting with often?** If they are, it makes sense to have a direct channel open to minimise routing fees.
 * **Are they a reliable peer?** If they are offline regularly this will cause you issues when sending or receiving transactions.
-* **Are they trustworthy?** As mentioned above, your peer has the option to attempt to cheat you when closing a channel so it pays to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
 * **Are they well connected?** If you only have 1 or 2 peers, it pays for them to be fairly well connected so that you can route transactions through them across the network. This will become clearer in the next section on transactions.
+* **Are they trustworthy?** As mentioned below, your peer has the option (although unlikely to succeed) to attempt to cheat you when closing a channel so it can save some hassle to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
 
 You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/) or use a simplified version [here](https://nodes.lightning.computer/availability/v1/btc.json) that gives nodes an aggregated score based upon a combination of things like uptime, liquidity and how well connected they are. It then displays the best 5%.
 
@@ -100,22 +100,17 @@ Much like a channel open, a channel closure is an on-chain Bitcoin transaction. 
 
 **Collaborative close**
 
-Where both parties agree to close the channel and the most recent state is broadcast to the network.
+Where one party initiates a channel closure, communicates this with their channel partner. Both parties agree to close the channel and the most recent state is broadcast to the network and each participant receives their sats back to their on chain wallet. This scenario covers the vast majority of all Lightning channel closures. 
 
 **Force Close**
 
-Where one party closes the channel without the consent of their counterpart. These types of closures generally occur when one of the channel parties is unreachable. For a force close to take place, one user simply broadcasts the most recent channel state known to them. Once a force close is confirmed onto the blockchain, the user that initiated the force close will have their balance locked for a set amount of time. This enables their counterparty to see the channel close and dispute it if they do not agree with the outcome.
+Where one party closes the channel without the consent of their counterpart. These types of closures generally occur when one of the channel parties is unreachable. For a force close to take place, one user simply broadcasts the most recent channel state known to them. Once a force close is confirmed onto the blockchain, the user that initiated the force close will have their balance locked for a set amount of time. This enables their counterparty to see the channel close and come back online to confirm the cannel state. If this does not happen, the party that closed the channel's on chain funds will become spendable after the lock time (usually 2016 blocks or two weeks) has ended.
 
-**Cheat close**
+**Disuputed close**
 
-A cheat close is the same as a force close, except that the initiating party is publishing an old channel state that favours them and pays them more sats back on chain. The protocol is well structured to penalise this sort of behaviour (detail below), provided your hardware is online around the time that the cheat closure transaction is broadcast.
+A disputed close arises from a force close being initiated. If the initiating party publishes an old channel state that favours them and pays them more sats back on chain, the party having the channel closed on them can dispute the closure if they disagree with the outcome. To trigger this dispute they simply bring their node back online within the lockout period (typically 2016 blocks or 2 weeks). Alternatively if that isn't an option because their node is in a different geographical location, they may have chosen to set up a [Watchtower](https://bitcoinmagazine.com/articles/watchtowers-are-coming-lightning) service that will monitor their channels and act on their behalf for a small fee. 
 
-**Justice Transaction**
-
-In both the 'force' and 'cheat' closure scenarios the party having the channel closed on them can dispute the closure if they do not agree with the outcome (eg the other party has published an old channel state, paying them more sats back). To trigger this dispute they simply bringing their node back online within the lockout period (typically 2016 blocks or 2 weeks). Alternatively they may have chosen to set up a [Watchtower](https://bitcoinmagazine.com/articles/watchtowers-are-coming-lightning) service that will monitor their channels and act on their behalf for a small fee. 
-
-If the party creating the dispute can successfully publish a more recent channel state than the one broadcast by their channel partner, their node will be able to publish a [Justice transaction](https://bitcoinmagazine.com/articles/bitmex-research-confirms-lightning-justice-works) and steal the entire balance of the channel. The threat of such a scenario is enough to ward off most dishonest Lightning operators for fear of losing all of their funds.
-
+If the party creating the dispute can successfully publish a more recent channel state than the one broadcast by their channel partner, their node will be able to publish a [Justice transaction](https://bitcoinmagazine.com/articles/bitmex-research-confirms-lightning-justice-works) and claim the entire balance of the channel. The threat of such a scenario is enough to ward off most dishonest Lightning operators for fear of losing all of their funds.
 
 ***
 
