@@ -88,7 +88,7 @@ You can open a channel with pretty much any network participant you like, howeve
 * **Is it someone you are likely to be transacting with often?** If they are, it makes sense to have a direct channel open to minimise routing fees.
 * **Are they a reliable peer?** If they are offline regularly this will cause you issues when sending or receiving transactions.
 * **Are they well connected?** If you only have 1 or 2 peers, it pays for them to be fairly well connected so that you can route transactions through them across the network. This will become clearer in the next section on transactions.
-* **Are they trustworthy?** As mentioned below, your peer has the option (although unlikely to succeed) to attempt to cheat you when closing a channel so it can save some hassle to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
+* **Are they trustworthy?** This is covered in detail below, but your peer has the option (although unlikely to succeed) to attempt to cheat you when closing a channel. It can save you some hassle to choose a peer you know or a public node entity that is commonly accepted as being an honest node operator
 
 You can compare these stats and many more when choosing a peer at [1ml](https://1ml.com/) or use a simplified version [here](https://nodes.lightning.computer/availability/v1/btc.json) that gives nodes an aggregated score based upon a combination of things like uptime, liquidity and how well connected they are. It then displays the best 5%.
 
