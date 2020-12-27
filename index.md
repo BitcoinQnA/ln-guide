@@ -290,6 +290,7 @@ Keysend is a development that allows for spontaneous payments to be routed witho
   <a href="https://twitter.com/BitcoinQ_A">By Bitcoin Q+A</a> |
   <a href="https://bqa.duckdns.org:20486/apps/96ZvtoJQr9bz5QyeDoUfhkmNTLZ/pos">Support</a> |
   <a href="https://github.com/BitcoinQnA/ln-guide">Create a PR</a> |
+  <a href="https://bitcoiner.guide">More resources</a> |
   <a href="https://ln.guide/">Back to top</a>
   <br><br>
 </p>
