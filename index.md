@@ -116,7 +116,7 @@ If the party creating the dispute can successfully publish a more recent channel
 
 ##  Transactions
 
-Lightning transactions are settled within a few seconds and cannot be recalled, undone or subsequently altered. The clever thing is, Lightning achieves this without the need to wait for a block confirmation on the blockchain whilst still maintaining Bitcoin's security principles becase any Lightning participant can settle on chain whenever they like.
+Lightning transactions are settled within a few seconds and cannot be recalled, undone or subsequently altered. The clever thing is, Lightning achieves this without the need to wait for a block confirmation on the blockchain whilst still maintaining Bitcoin's security principles because any Lightning participant can settle on chain whenever they like.
 
 Being able to do fast and cheap payments to a single user might be beneficial if you are conducting many transactions but don't forget that each channel has a blockchain footprint of two on chain transactions, so opening a channel to do just a couple of payments is counter productive. Lightning is not always the answer. So what happen's when a user wants to make a Lightning payment to someone they don't have a channel open with, surely they don't need to have to open channels with every person they want to transact with? 
 
